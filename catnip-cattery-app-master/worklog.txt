@@ -1,0 +1,44 @@
+15/3  - Finished 'Add quote' tutorial
+17/3  - Completed over half of the SQL course on Khan Academy
+      - Finished 'Show all quotes' tutorial
+18/3  - Finished 80% of SQL course
+      - Finished 'show user quotes' tutorial
+19/3  - Started 'edit and delete quotes' tutorial
+20/3  - Made main project repo, will finish the rest of the tutorials later
+22/3  - Created the bones of the main project, database too.
+      - Added an add new cat function to main project.
+23/3  - Started working on a delete function
+25/3  - Finished the delete function
+26/3  - Started an edit function
+27/3  - Finished edit function
+28/3  - Finished add and remove feature
+
+    ~ ~ ~ ~ ~ ~ ~       Base Functionality Done       ~ ~ ~ ~ ~ ~ ~
+
+2/4   - I have gotten to a point where i need to learn other things to be able to progress
+6/5   - I've learned what i needed.
+      - May have made the connection table work, need to change database to match.
+8/5   - Merged functions that make connections into one function for efficency and for less probablity of error.
+9/5   - taking a break fo a while.
+23/5  - break done. 
+      - need to fix edit for owner and cat
+27/5  - fixed edit cat, still need to do owner
+30/5  - working on edit owner
+6/6   - proccessing data into dictonary for allowners page
+12/6  - i may have to try do it a different way if i can't fix it today
+
+        (took a break)
+
+26/6  - i added delete triggers that work and edit triggers that probably dont work
+28/6  - i found an error that i need to fix now to move forward.
+1/7   - i fixed the error now i can test the cat edit trigger
+2/7   - the trigger didnt work but it was an easy fix.
+
+    ~ ~ ~ ~ ~ ~ ~                            ~ ~ ~ ~ ~ ~ ~
+                        App Is Usable 
+                any thing beyond this point is
+               just to make the app more usable
+                       for the client.
+    ~ ~ ~ ~ ~ ~ ~                            ~ ~ ~ ~ ~ ~ ~
+
+3/7   - i've started working on the page layouts making them look nicer and more user friendly

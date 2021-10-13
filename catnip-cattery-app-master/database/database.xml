@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: https://ondras.zarovi.cz/sql/demo/ -->
+<sql>
+<datatypes db="sqlite">
+	<group label="Affinity">
+		<type label="Text" default="" length="1" sql="TEXT" quote="'" color="rgb(255,200,200)"/>
+		<type label="Numeric" default="0" length="0" sql="NUMERIC" quote="" color="rgb(238,238,170)"/>
+		<type label="Integer" default="0" length="0" sql="INTEGER" quote="" color="rgb(238,238,170)"/>
+		<type label="Real" default="0" length="0" sql="REAL" quote="" color="rgb(238,238,170)"/>
+		<type label="None" default="" length="0" sql="NONE" quote="" color="rgb(200,255,200)"/>
+	</group>
+</datatypes><table x="285" y="6" name="cat">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="name" null="1" autoincrement="0">
+<datatype>TEXT(55)</datatype>
+<default>NULL</default></row>
+<row name="owner" null="1" autoincrement="0">
+<datatype>TEXT(50)</datatype>
+<default>NULL</default></row>
+<row name="medicationYN" null="1" autoincrement="0">
+<datatype>INTEGER(1)</datatype>
+<default>NULL</default></row>
+<row name="medicationDetails" null="1" autoincrement="0">
+<datatype>TEXT(255)</datatype>
+<default>NULL</default></row>
+<row name="diet" null="1" autoincrement="0">
+<datatype>TEXT(255)</datatype>
+<default>NULL</default></row>
+<row name="likesDislikes" null="1" autoincrement="0">
+<datatype>TEXT(255)</datatype>
+<default>NULL</default></row>
+<row name="behaviourYN" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="behaviourDetails" null="1" autoincrement="0">
+<datatype>TEXT(255)</datatype>
+<default>NULL</default></row>
+<row name="other" null="1" autoincrement="0">
+<datatype>TEXT(255)</datatype>
+<default>NULL</default></row>
+<row name="dateEntered" null="1" autoincrement="0">
+<datatype>TEXT</datatype>
+<default>CURRENT_TIMESTAMP</default></row>
+<row name="dateLeaving" null="1" autoincrement="0">
+<datatype>TEXT(40)</datatype>
+<default>NULL</default></row>
+<row name="inCattery" null="1" autoincrement="0">
+<datatype>INTEGER(1)</datatype>
+<default>1</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="461" y="109" name="cat_owner">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="id_cat" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="cat" row="id" />
+</row>
+<row name="id_owner" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="owner" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="101" y="97" name="users">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="username" null="1" autoincrement="0">
+<datatype>TEXT</datatype>
+<default>NULL</default></row>
+<row name="email" null="1" autoincrement="0">
+<datatype>TEXT</datatype>
+<default>NULL</default></row>
+<row name="password" null="1" autoincrement="0">
+<datatype>TEXT</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="659" y="104" name="owner">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="name" null="1" autoincrement="0">
+<datatype>TEXT(55)</datatype>
+<default>NULL</default></row>
+<row name="address" null="1" autoincrement="0">
+<datatype>TEXT(80)</datatype>
+<default>NULL</default></row>
+<row name="phoneNumber" null="1" autoincrement="0">
+<datatype>TEXT(20)</datatype>
+<default>NULL</default></row>
+<row name="email" null="1" autoincrement="0">
+<datatype>TEXT(80)</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+</sql>

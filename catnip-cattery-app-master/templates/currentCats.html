@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <h1>Current Cats</h1>
+
+    
+    <br>Make a Search bar here!<br><br><br>
+
+        <!-- <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Collapsible Group Item #1
+              </button>
+            </h5>
+          </div> -->
+
+ 
+        {% if currentCats: %}
+            <div id="accordion">
+            {% for cat in currentCats: %}
+                <div class="card">
+                    <div class="card-header" id="header{{cat.id}}" style="float:left">
+
+                        {{cat.name}} : <br>
+                        <div style="float:right;">
+                            <a href="removeCat/{{cat.id}}" class="btn btn-info btn">Check Out</a>
+                            <a href="editCat/{{cat.id}}" class="btn btn-primary btn">Edit</a>
+                            <a href="deleteCat/{{cat.id}}" class="btn btn-danger btn">Delete</a>
+
+                        </div>
+                        Owner -  {{cat.ownerName}} <br>
+                        Has Medication  -  {{cat.medicationYN}} <br>
+                        Entered: {{cat.dateEntered}} / Leaving: {{cat.dateLeaving}}
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse{{cat.id}}" aria-expanded="false" aria-controls="collapse{{cat.id}}">
+                                Show Information
+                            </button>
+                        </h5>
+
+                    </div>
+
+                    <div id="collapse{{cat.id}}" class="collapse" aria-labelledby="header{{cat.id}}" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="float:left;">
+                                    <!-- Owner's Address  -  {{cat.address}} <br>
+                                    Owner's Phone Number  -  {{cat.phoneNumber}} <br> -->
+                                <!-- Owner's Email  -  {{cat.email}} <br> <br>
+                                Breed  -  {{cat.breed}} <br>
+                                Colour  -  {{cat.colour}} <br> -->
+                                Medication Details  -  {{cat.medicationDetails}} <br>
+                                Diet  - {{cat.diet}} <br>
+                                Likes/Dislikes  -  {{cat.likesDislikes}} <br>
+                                Has Bad Behaviour  -  {{cat.behaviourYN}} <br>
+                                Behaviour Details  -  {{cat.behaviourDetails}} <br>
+                                Other  -  {{cat.other}} <br>
+                                <!-- Date Leaving  -  {{cat.dateLeaving}} <br> -->
+                                <br>
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse{{cat.id}}" aria-expanded="false" aria-controls="collapse{{cat.id}}">
+                                    Hide Information
+                                </button>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+            </div>
+        {% endif %}
+
+
+
+{% endblock %}

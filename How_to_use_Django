@@ -1,0 +1,26 @@
+#start with creating a vitual enviroment using virtualenv
+    virtualenv 'envname'
+
+#activate enviroment
+    'envname'\Scripts\activate.bat
+
+#install django
+    pip install django
+
+#create Django project
+    django-admin startproject 'projectname'
+
+#Run server, inside project folder
+    cd 'projectname'
+    py manage.py runserver
+
+#create Django app
+    py manage.py startapp 'appname'
+
+#migrate
+    py manage.py migrate
+
+#making a migration
+    py manage.py makemigrations 'app name' # this will save your changes to the db
+    py manage.py migrate # the actual migration
+    # then commit (multiple commits can be pushed together)

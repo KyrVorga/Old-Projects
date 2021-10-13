@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+    <title>Add a new owner</title>
+
+
+
+    {% from "includes/_form_helpers.html" import render_field %}
+    
+
+    <form method="POST" action="" id="form">
+    
+
+        {%include "includes/_new_owner_form.html" %}
+
+        <br>
+        <p><input type="submit" class="btn btn-primary btn-lg btn-block" style="float:left; height:5%; font-size:150%;" value="Submit"></p>
+                    
+    </form>
+
+    <script>
+
+    </script>
+    {% endblock %}

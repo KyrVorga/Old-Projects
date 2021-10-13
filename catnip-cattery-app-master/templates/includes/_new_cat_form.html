@@ -1,0 +1,79 @@
+<h3>Cat Information</h2>
+
+<br>
+
+
+
+
+<div class="form-group" style="height:60px;">
+    {{render_field(form.catName, class_="form-control")}}
+</div> 
+<div class="form-group" style="height:60px;">
+    {{render_field(form.catOwner, class_="form-control")}}
+</div> 
+
+
+
+<div class="form-row">
+    <div class="col"> 
+        {{ form.catMedication.label.text }}
+        <br>
+        <div class="form-group btn-group btn-group-toggle" style="margin-top:2.5%;" data-toggle="buttons"> 
+            {% for radio in form.catMedication %}
+            <label class="btn btn-lg btn-secondary shadow-none">
+                {{ radio }}
+                {{ radio.label.text }}
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col">
+        <div class="form-group">
+            <div class="form-group" style="height:80px; margin-left:-50%; width:150%;">
+                {{render_field(form.catMedicationDetails, class_="form-control")}}
+            </div> 
+        </div> 
+    </div>
+</div>
+    
+
+<div class="form-group" style="height:80px;">
+    {{render_field(form.catDiet, class_="form-control")}}
+</div>
+<div class="form-group" style="height:80px;">
+    {{render_field(form.catLikesDislikes, class_="form-control")}}
+</div>
+
+
+
+
+<div class="form-row">
+    <div class="col"> 
+        {{ form.catBehaviour.label.text }}
+        <br>
+        <div class="form-group btn-group btn-group-toggle" style="margin-top:2.5%;" data-toggle="buttons"> 
+            {% for radio in form.catBehaviour %}
+            <label class="btn btn-lg btn-secondary shadow-none">
+                {{ radio }}
+                {{ radio.label.text }}
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col">
+        <div class="form-group" style="height:80px; margin-left:-50%; width:150%;">
+            {{render_field(form.catBehaviourDetails, class_="form-control")}}
+        </div>
+    </div>
+</div>
+
+<div class="form-group" style="height:80px;">
+    {{render_field(form.catOther, class_="form-control")}}
+</div>
+
+<div class="form-group" style="height:60px;">
+    {{render_field(form.catDepatureDate, class_="form-control")}}
+</div>
+ 
+
+

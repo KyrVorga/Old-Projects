@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+    {% block body  %}
+    
+    <div class="jumbotron text-center">
+        <h1>Accounts</h1>
+    </div>
+    {% from "includes/_form_helpers.html" import render_field %}
+    <form method="POST" action="">
+        <div class="">
+            {{ render_field(form.name,class_="form-control") }}
+        </div>
+        <div class="">
+            {{ render_field(form.total,class_="form-control") }}
+        </div>
+        <div class="">
+            {{ render_field(form.percent,class_="form-control") }}
+        </div>
+        <div class="">
+            {{ render_field(form.flat,class_="form-control") }}
+        </div>
+    </form>
+
+
+    {% endblock  %}

@@ -1,0 +1,42 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    background-color: #f4f4f4;
+    color: #555;
+    margin: 0;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.container{
+	width:80%;
+	margin:auto;
+	overflow:hidden;
+}
+
+#main-header {
+    background-color:coral;
+    color: #fff;
+}
+
+#navbar {
+    background-color: #333;
+}
+
+#navbar ul {
+    list-style: none;
+}
+
+#navbar li {
+    display: inline;
+    margin: 0 2em;
+    float: right;
+}
+#navbar a {
+    color: #000;
+    text-decoration: none;
+}

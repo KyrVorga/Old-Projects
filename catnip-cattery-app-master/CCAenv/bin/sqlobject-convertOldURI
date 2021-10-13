@@ -1,0 +1,4 @@
+#!/home/kuroiken/Desktop/VS_Code/catnip-cattery-app/CCAenv/bin/python3
+# EASY-INSTALL-SCRIPT: 'SQLObject==3.7.2','sqlobject-convertOldURI'
+__requires__ = 'SQLObject==3.7.2'
+__import__('pkg_resources').run_script('SQLObject==3.7.2', 'sqlobject-convertOldURI')

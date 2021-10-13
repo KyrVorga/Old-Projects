@@ -1,0 +1,1 @@
+cd F:\code\Map venv\Scripts\activate py map.py

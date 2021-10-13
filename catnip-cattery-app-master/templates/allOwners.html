@@ -1,0 +1,79 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <h1>All Owners</h1>
+
+    
+    <br>Make a Search bar here!<br><br><br>
+        {% if allOwners: %}
+            <div id="accordion">
+
+            {% for owner in allOwners: %}
+                {% set inCattery %}  {% endset %}
+                <div class="card">
+                    <div class="card-header" id="header{{owner}}" style="float:left">
+
+                        Owner's Name  -  {{allOwners[owner][0][1]}} <br>
+                        
+                        <div style="float:right;">
+                            <a href="editOwner/{{owner}}" class="btn btn-primary">Edit</a>
+                            <a href="deleteOwner/{{owner}}" class="btn btn-danger">Delete</a>
+                        </div>
+
+                        Has a Cat in Cattery  -
+                        {% for cat in allOwners[owner] %}
+
+                            {% if cat[17] == 1 %}
+                                {% set inCattery = 1 %}
+                            {% else %}
+                                {% set inCattery = 0 %}
+                            {% endif %}
+                            
+                        {% endfor %}
+                        
+                        {% if inCattery == 1 %}
+                            Yes
+                        {% else %}
+                            No
+                        {% endif %}
+                        {{ inCattery }}
+                        <br>
+
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse{{owner}}" aria-expanded="false" aria-controls="collapse{{owner}}">
+                                Show Information
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse{{owner}}" class="collapse" aria-labelledby="header{{owner}}" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="float:left;">
+
+                                Owner's Address  -  {{allOwners[owner][0][2]}} <br>
+                                Owner's Phone Number  -  {{allOwners[owner][0][3]}} <br>
+                                Owner's Email  -  {{allOwners[owner][0][4]}} <br> 
+                                <br>
+                                <br>
+                                Cats: <br>
+                                {% for cat in allOwners[owner] %}
+                                     {% if cat[5] %}
+                                        {{cat[6]}} <br>
+                                    {% endif %}    
+                                {% endfor %}
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse{{owner}}" aria-expanded="false" aria-controls="collapse{{owner}}">
+                                    Hide Information
+                                </button>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        {% endif %}
+{% endblock %}
+
+
+ 
+
+
